@@ -111,3 +111,5 @@ Display ngModel data
 ></app-phone-input>
 <p>{{phoneData.control | json}}</p>
 ```
+
+[Stackblitz demo](https://stackblitz.com/edit/github-pwabun?file=src/app/app.component.html)
