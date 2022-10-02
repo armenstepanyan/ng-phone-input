@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  width: 100%;
+
+  & select {
+    height: 38px;
+    border: 1px solid #ced4da;
+    border-right: none;
+    padding: 2px 3px;
+  }
+
+  & select:focus {
+    outline: none;
+  }
+
+  & input {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+  }
+
+  & input:focus {
+    border-color: #80bdff;
+    outline: none;
+  }
+
+}

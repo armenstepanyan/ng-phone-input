@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="select">
+    <select [ngModel]="phone.code" [disabled]="disabled" (ngModelChange)="setValue($event, 'code')">
+      <option value="us">+1</option>
+      <option value="ru">+7</option>
+    </select>
+  </div>
+  <div class="input">
+    <input
+      type="text"
+      placeholder="Type here..."
+      [ngModel]="phone.value"
+      (ngModelChange)="setValue($event, 'value')"
+      [disabled]="disabled"
+    />
+  </div>
+</div>
+<div style="border: 1px solid #4794d7; padding: 3px; margin: 5px 0; ">
+  <p>Input value is</p>
+  <p>{{ phone | json }}</p>
+</div>

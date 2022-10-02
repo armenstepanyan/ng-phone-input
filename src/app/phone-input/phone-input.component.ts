@@ -1,5 +1,3 @@
-# PhoneInputExample
-```typescript
 import { Component, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms'
 
@@ -61,53 +59,7 @@ export class PhoneInputComponent implements OnInit, ControlValueAccessor {
     this.onTouched();
   }
 
+  ngOnInit(): void {
+  }
 
 }
-```
-
-View
-```html
-<div class="container">
-  <div class="select">
-    <select [ngModel]="phone.code" [disabled]="disabled" (ngModelChange)="setValue($event, 'code')">
-      <option value="us">+1</option>
-      <option value="ru">+7</option>
-    </select>
-  </div>
-  <div class="input">
-    <input
-      type="text"
-      placeholder="Type here..."
-      [ngModel]="phone.value"
-      (ngModelChange)="setValue($event, 'value')"
-      [disabled]="disabled"
-    />
-  </div>
-</div>
-```
-
-Usage
-```html
-form [formGroup]="phoneForm" >
-<p>
-  <input type="text" formControlName="name" placeholder="Name">
-</p>
-
-<app-phone-input formControlName="phone"></app-phone-input>
-</form>
-
-
-<h2>With ng model</h2>
-<app-phone-input [(ngModel)]="phoneInput"></app-phone-input>
-
-```
-
-Display ngModel data
-```html
-<app-phone-input 
-  [(ngModel)]="phoneInput" 
-  name="phoneInput"
-  #phoneData="ngModel"
-></app-phone-input>
-<p>{{phoneData.control | json}}</p>
-```
